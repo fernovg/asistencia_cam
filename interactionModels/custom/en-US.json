@@ -1,0 +1,95 @@
+{
+  "interactionModel": {
+    "dialog": {
+      "intents": [
+        {
+          "slots": [
+            {
+              "name": "name",
+              "elicitationRequired": true,
+              "type": "AMAZON.FirstName",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.109079440372.1682642961520"
+              }
+            }
+          ],
+          "name": "RegistrarUsuarioIntent",
+          "confirmationRequired": false,
+          "prompts": {}
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "languageModel": {
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "slots": [
+            {
+              "name": "enfer",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "name": "camintents",
+          "samples": [
+            "has {enfer} what activities can he do",
+            "activities that someone can do with {enfer}",
+            "como puedo cuidar a mi hijo con {enfer}",
+            "tips for {enfer}",
+            "tips for caring for someone with {enfer}",
+            "how can i care for someone {enfer}"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "name",
+              "type": "AMAZON.FirstName",
+              "samples": [
+                "my name is {name}"
+              ]
+            }
+          ],
+          "name": "RegistrarUsuarioIntent",
+          "samples": [
+            "my name is {name}",
+            "register my name"
+          ]
+        }
+      ],
+      "types": [],
+      "invocationName": "cam assistant"
+    },
+    "prompts": [
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "mention your name please"
+          }
+        ],
+        "id": "Elicit.Slot.109079440372.1682642961520"
+      }
+    ]
+  }
+}

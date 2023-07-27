@@ -1,0 +1,116 @@
+{
+  "interactionModel": {
+    "dialog": {
+      "intents": [
+        {
+          "slots": [
+            {
+              "name": "name",
+              "elicitationRequired": true,
+              "type": "AMAZON.FirstName",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.785636999594.1007304554603"
+              }
+            }
+          ],
+          "name": "RegistrarUsuarioIntent",
+          "confirmationRequired": false,
+          "prompts": {}
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "languageModel": {
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": [
+            "como funciona",
+            "me puede ayudar",
+            "ayuda",
+            "necesito ayuda"
+          ]
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": [
+            "nos vemos",
+            "adios"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "slots": [
+            {
+              "name": "enfer",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "name": "camintents",
+          "samples": [
+            "tiene {enfer} que actividades puede realizar",
+            "actividades que puede hacer alguien con {enfer}",
+            "como puedo cuidar a mi hijo con {enfer}",
+            "consejos para {enfer}",
+            "consejos para cuidar a alguien con {enfer}",
+            "como puedo cuidar a alguien con {enfer}"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "name",
+              "type": "AMAZON.FirstName",
+              "samples": [
+                "me puedes llamar {name}",
+                "me dicen {name}",
+                "soy {name}",
+                "me llamo {name}",
+                "mi nombre es {name}"
+              ]
+            }
+          ],
+          "name": "RegistrarUsuarioIntent",
+          "samples": [
+            "registra mi nombre",
+            "mi nombre es {name}",
+            "me llamo {name}"
+          ]
+        }
+      ],
+      "types": [],
+      "invocationName": "atención cam"
+    },
+    "prompts": [
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Mencioname tu nombre, por favor"
+          },
+          {
+            "type": "PlainText",
+            "value": "Dime como te llamas "
+          },
+          {
+            "type": "PlainText",
+            "value": "Me puedes decir como te llamas"
+          },
+          {
+            "type": "PlainText",
+            "value": "Si, Pero cual es tu nombre?"
+          }
+        ],
+        "id": "Elicit.Slot.785636999594.1007304554603"
+      }
+    ]
+  }
+}
